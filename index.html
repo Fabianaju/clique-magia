@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+     <link rel="icon" href="camera.png" type="image/png">
+    <title>Clique & Magia</title>
+</head>
+
+<body>
+    <div class="clouds"></div>
+    <header>
+        <nav class="navigation">
+            <a href="#" class="logo">Clique & <span> Magia</span></a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#">Início</a></li>
+                <li class="nav-item"><a href="#sobre">Sobre</a></li>
+                <li class="nav-item"><a href="#portfolio">Portfólio</a></li>
+                <li class="nav-item"><a href="#contato">Contato</a></li>
+            </ul>
+            <i class='bx bx-moon change-theme' id="theme-icon"></i>
+            <div class="menu" id="menu-icon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="home">
+            <div class="home-text">
+                <h4 class="text-h4">Bem-vindo ao Clique & Magia</h4>
+                <h1 class="text-h1">Capturando Momentos Incríveis</h1>
+                <p>Através da minha lente, transformo momentos em eternidade.</p>
+                <a href="#" class="home-btn">Veja Meu Trabalho</a>
+            </div>
+            <div class="home-img">
+                <img src="fotografo.png" alt="fotografo">
+            </div>
+        </section>
+
+        <section id="sobre" class="sobre">
+    <div class="sobre-container">
+        <div class="sobre-texto">
+            <h2 class="sobre-title">Sobre Mim</h2>
+            <p class="sobre-text">
+                Sou uma fotógrafa apaixonada por capturar momentos especiais na vida das pessoas.
+                Minha jornada começou há mais de 10 anos e, desde então, tenho trabalhado em diversos projetos,
+                desde casamentos até fotografia de natureza. Cada clique é uma nova descoberta, e meu objetivo é
+                eternizar as emoções de cada momento através da minha câmera.
+            </p>
+        </div>
+        <div class="sobre-imagem">
+            <img src="sobre-mim.png" alt="Sobre Mim">
+        </div>
+    </div>
+</section>
+
+       <section id="servicos" class="servicos">
+    <div class="servicos-container">
+        <h2 class="servicos-title">Meus Serviços</h2>
+        <div class="servicos-lista">
+            <div class="servico-item">
+                <i class='bx bx-camera'></i>
+                <h3>Fotografia de Casamentos</h3>
+                <p>Capturo cada momento especial do seu grande dia com atenção aos detalhes e emoção.</p>
+            </div>
+            <div class="servico-item">
+                <i class='bx bx-image'></i>
+                <h3>Portfólio de Retratos</h3>
+                <p>Ofereço retratos personalizados para capturar sua essência e personalidade.</p>
+            </div>
+            <div class="servico-item">
+                <i class='bx bx-landscape'></i>
+                <h3>Fotografia de Paisagens</h3>
+                <p>Registro a beleza da natureza com técnicas que realçam a majestade das paisagens.</p>
+            </div>
+            <div class="servico-item">
+                <i class='bx bx-camera-movie'></i>
+                <h3>Fotografia de Eventos</h3>
+                <p>Documentação completa de eventos corporativos, festas e celebrações com imagens de alta qualidade.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section id="portfolio" class="portfolio">
+            <div class="portfolio-container">
+                <h2 class="portfolio-title">Portfólio</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item"><img src="portfolio1.png" alt="Foto 1"></div>
+                    <div class="portfolio-item"><img src="portfolio2.png" alt="Foto 2"></div>
+                    <div class="portfolio-item"><img src="portfolio3.png" alt="Foto 3"></div>
+                    <!-- Adicione mais itens conforme necessário -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contato">
+    <div class="contato-container">
+        <h2 class="contato-title">Entre em Contato</h2>
+        <form class="contato-form">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+            <button type="submit" class="contato-btn">Enviar</button>
+        </form>
+    </div>
+</section>
+
+     <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-info">
+            <h2>Contato</h2>
+            <p>Email: cliqueemagia@meusite.com</p>
+            <p>Telefone: (11) 99999-9999</p>
+        </div>
+        <div class="footer-social">
+            <a href="#" class="social-icon"><i class='bx bxl-facebook'></i></a>
+            <a href="#" class="social-icon"><i class='bx bxl-twitter'></i></a>
+            <a href="#" class="social-icon"><i class='bx bxl-instagram'></i></a>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2024 Clique & Magia. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

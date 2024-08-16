@@ -1,0 +1,640 @@
+/* Importação da fonte Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Variáveis de cor para os temas claro e escuro */
+:root {
+    --primary-color: #ff6600; 
+    --primary-color-dark: #cc5200; 
+    --background-light: #ffffff; 
+    --background-dark: #1e1c2a; 
+    --text-dark: #1e1c2a; 
+    --text-light: #ffffff; 
+}
+
+/* Estilos gerais */
+body {
+    color: var(--text-dark);
+    background: var(--background-light);
+    transition: background 0.5s, color 0.5s;
+}
+
+body.dark-mode {
+    color: var(--text-light);
+    background: var(--background-dark);
+}
+
+/* Estilos da navegação */
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+    width: 100%;
+    background: var(--background-light);
+    transition: all 0.5s;
+    position: fixed;
+    z-index: 1000;
+}
+
+body.dark-mode .navigation {
+    background: var(--background-dark);
+}
+
+/* Estilos da logo */
+.navigation .logo {
+    color: var(--primary-color);
+    font-size: 1.7rem;
+    font-weight: 600;
+    animation: pulse 2s infinite, shake 1s infinite;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.navigation .logo span {
+    color: var(--text-dark);
+}
+
+body.dark-mode .navigation .logo span {
+    color: var(--text-light);
+}
+
+/* Menu de navegação */
+.navigation ul {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.navigation ul li a {
+    color: var(--text-dark);
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+body.dark-mode .navigation ul li a {
+    color: var(--text-light);
+}
+
+.navigation ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Botão de alternância de tema */
+.change-theme {
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+/* Menu hamburguer */
+.menu {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.menu .bar {
+    width: 25px;
+    height: 3px;
+    background: var(--text-dark);
+    transition: all 0.5s;
+}
+
+body.dark-mode .menu .bar {
+    background: var(--text-light);
+}
+
+/* Estilos da seção Home */
+.home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10%;
+}
+
+.home-text {
+    max-width: 37rem;
+}
+
+.home-text .text-h4 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.home-text .text-h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    line-height: 4rem;
+    color: var(--text-dark);
+}
+
+body.dark-mode .home-text .text-h1 {
+    color: var(--text-light);
+}
+
+.home-text p {
+    margin-bottom: 4rem;
+    color: var(--text-dark);
+}
+
+body.dark-mode .home-text p {
+    color: var(--text-light);
+}
+
+.home-btn {
+    padding: 15px 45px;
+    background: var(--primary-color);
+    color: var(--text-light);
+    border-radius: 10px;
+    font-weight: 700;
+    transition: all 0.5s;
+}
+
+.home-btn:hover {
+    background: #e65c00;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+/* Estilos da seção Home */
+.home-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.home-img img {
+    width: 100%;
+    animation: pulse 10s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* Estilos da seção Sobre */
+.sobre {
+    padding: 100px 10%;
+    background: var(--background-light);
+    color: var(--text-dark);
+    transition: all 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body.dark-mode .sobre {
+    background: var(--background-dark);
+    color: var(--text-light);
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.sobre-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.sobre-texto {
+    flex: 1;
+    text-align: justify; 
+    line-height: 1.6; 
+}
+
+.sobre-imagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.sobre-imagem img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 5px solid transparent; 
+    transition: border-color 0.3s ease; 
+}
+
+.sobre-imagem img:hover {
+    border-color: #ff5722; 
+}
+
+
+
+/* Estilos da seção Serviços */
+.servicos {
+    padding: 100px 10%;
+    background: var(--background-light);
+    color: var(--text-dark); 
+    text-align: center;
+    transition: all 0.5s;
+}
+
+body.dark-mode .servicos {
+    background: var(--background-dark); 
+    color: var(--text-light); 
+}
+
+.servicos-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.servicos-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.servico-item {
+    background: var(--secondary-color); 
+    color: var(--dark); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+    transition: all 0.5s;
+}
+
+body.dark-mode .servico-item {
+    background: var(--text-dark); 
+    color: var(--text-light); 
+}
+
+.servico-item i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Estilos da seção Portfólio */
+.portfolio {
+    padding: 100px 10%;
+    background: var(--background-light);
+    color: var(--text-dark);
+    transition: all 0.5s;
+}
+
+body.dark-mode .portfolio {
+    background: var(--background-dark);
+    color: var(--text-light);
+}
+
+.portfolio-container {
+    text-align: center;
+}
+
+.portfolio-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.portfolio-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Seção de Contato */
+.contato {
+    background: var(--background-light);
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.contato-container {
+    max-width: 800px;
+    width: 100%;
+    background: var(--background-dark);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.contato-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.contato-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contato-form label {
+    font-size: 1rem;
+    color: var(--text-light);
+    text-align: left;
+}
+
+.contato-form input,
+.contato-form textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    background: var(--background-light);
+    color: var(--text-dark);
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+body.dark-mode .contato-form input,
+body.dark-mode .contato-form textarea {
+    background: var(--background-dark);
+    color: var(--text-light);
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus {
+    border-color: var(--primary-color-dark);
+}
+
+.contato-btn {
+    padding: 12px 20px;
+    background: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.contato-btn:hover {
+    background: var(--primary-color-dark);
+}
+
+body.dark-mode .contato {
+    background: var(--background-darker);
+}
+
+body.dark-mode .contato-container {
+    background: var(--background-darker);
+}
+
+@media (max-width: 768px) {
+    .contato-container {
+        padding: 20px;
+    }
+
+    .contato-title {
+        font-size: 1.5rem;
+    }
+
+    .contato-form input,
+    .contato-form textarea {
+        font-size: 0.9rem;
+    }
+
+    .contato-btn {
+        font-size: 1rem;
+    }
+}
+
+./* Estilos do rodapé */
+.footer {
+    background: var(--background-light);
+    color: var(--text-dark);
+    padding: 40px 10%;
+    text-align: center;
+    transition: all 0.5s;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .footer {
+    background: var(--background-dark);
+    color: var(--text-light);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-container {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+}
+
+.footer-info, .footer-social, .footer-copyright {
+    margin-bottom: 1rem;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.footer-social a {
+    color: var(--text-dark);
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+body.dark-mode .footer-social a {
+    color: var(--text-light);
+}
+
+.footer-social a:hover {
+    color: var(--primary-color);
+}
+
+/* Animações */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(0); }
+    75% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
+/* Estilos do menu hamburguer para telas menores */
+@media (max-width: 768px) {
+    .navigation ul {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: var(--background-light);
+        flex-direction: column;
+        gap: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .navigation ul.show {
+        display: flex;
+    }
+
+    .navigation .menu {
+        display: flex;
+    }
+
+    .navigation ul li {
+        text-align: center;
+        width: 100%;
+    }
+
+    .navigation ul li a {
+        padding: 15px;
+        font-size: 1.2rem;
+        display: block;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .navigation ul li a:hover {
+        background: var(--primary-color);
+        color: #fff;
+    }
+}
+
+/* Ícones do menu hamburguer */
+.menu {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.menu .bar {
+    width: 25px;
+    height: 3px;
+    background: var(--text-dark);
+    transition: all 0.5s;
+}
+
+body.dark-mode .menu .bar {
+    background: var(--text-light);
+}
+
+/* Estilo do menu hamburguer quando ativado */
+.menu.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/*nuvem*/
+.clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.clouds::before,
+.clouds::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: url('nuvem.png') repeat;
+    opacity: 0.5;
+}
+
+.clouds::before {
+    animation: moveClouds 30s linear infinite;
+}
+
+.clouds::after {
+    animation: moveClouds 60s linear infinite;
+    opacity: 0.3;
+}
+
+@keyframes moveClouds {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
